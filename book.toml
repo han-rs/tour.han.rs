@@ -1,0 +1,21 @@
+[book]
+authors = ["Hantong Chen"]
+language = "zh-CN"
+multilingual = true
+title = "Rust 学习之旅"
+
+[rust]
+edition = "2024"
+
+[output.html]
+additional-js = ["./theme/giscus.js"]
+smart-punctuation = true
+mathjax-support = true
+hash-files = true
+
+[output.html.playground]
+editable = true
+copyable = true
+copy-js = true
+line-numbers = true
+runnable = true
