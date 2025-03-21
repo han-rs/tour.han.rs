@@ -131,15 +131,15 @@ const getHead = (words, lang) => {
         <meta name="description" content="Welcome to the Tour of Rust. This is meant to be a step by step guide through the features of the Rust programming language">
         <meta name="theme-color" content="#ff6801"/>
 
-        <link rel="stylesheet" href="tour.css">
+        <link rel="stylesheet" href="./tour.css">
         <link rel="preload" href="https://fonts.gstatic.com/s/neuton/v12/UMBQrPtMoH62xUZKdK0vfQr4LLkw6A.woff2" as="font" />
         <link rel="preload" href="https://fonts.gstatic.com/s/neuton/v12/UMBTrPtMoH62xUZCz4g6UCj1Bg.woff2" as="font" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,400;0,700;1,400&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
         <link rel="manifest" href="./site.webmanifest">
 
         <script src="./tour.js" defer></script>
@@ -173,14 +173,14 @@ function template(
     <body>
         <div class="tour">
             <div class="header">
-                <span class="title"><a href="${getFileName(
+                <span class="title"><a href="./${getFileName(
                   lang,
                   0,
                   isBeta,
                   lessonsData[0]?.chapter
                 )}">${getWord(words, lang, "tor")}</a></span>
                 <span class="nav">
-                <span class="toc"><a href="TOC_${lang}.html">${getWord(
+                <span class="toc"><a href="./TOC_${lang}.html">${getWord(
     words,
     lang,
     "toc"
@@ -192,7 +192,7 @@ function template(
             <div class="bottomnav">
                 ${
                   index !== 0
-                    ? `<span class="back"><a href="${
+                    ? `<span class="back"><a href="./${
                         isBeta ? "beta_" : ""
                       }${getFileName(
                         lang,
@@ -209,7 +209,7 @@ function template(
                 ${
                   isLast
                     ? ""
-                    : `<span class="next"><a href="${
+                    : `<span class="next"><a href="./${
                         isBeta ? "beta_" : ""
                       }${getFileName(
                         lang,
@@ -229,7 +229,7 @@ function template(
                 ? `<div class="code">
             <iframe width="100%" src="${code}" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" title="Rust Playground" loading="lazy"></iframe>
             </div>`
-                : '<div class="code"><center><img src="/ferris_lofi.png" alt="Mascot Ferris" width="300" height="236"></center></div>'
+                : '<div class="code"><center><img src="./ferris_lofi.png" alt="Mascot Ferris" width="300" height="236"></center></div>'
             }
         </div>
     </body>
@@ -362,7 +362,7 @@ languages.forEach((lang) => {
             if (x[lang] && x[lang].clone) {
               targetLang = x[lang].clone;
             }
-            let s = `<li><a href="${getFileName(lang, i, false, x.chapter)}">${
+            let s = `<li><a href="./${getFileName(lang, i, false, x.chapter)}">${
               x[targetLang]
                 ? x[targetLang].title
                 : `[${getWord(words, targetLang, "untranslated")}] ${
@@ -370,7 +370,7 @@ languages.forEach((lang) => {
                   }`
             }</a></li>`;
             if (x.chapter !== undefined) {
-              s = `</ul><h3><a href="${getFileName(
+              s = `</ul><h3><a href="./${getFileName(
                 lang,
                 i,
                 false,

@@ -1,5 +1,5 @@
 - title: >-
-    Привет, <img src="/favicon-32x32.png" style="display:inline;
+    Привет, <img src="./favicon-32x32.png" style="display:inline;
     vertical-align:bottom">
   content_markdown: >
     Добро пожаловать в **Тур по Rust**. Это пошаговое руководство
