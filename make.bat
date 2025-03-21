@@ -12,6 +12,10 @@ if "%~1" == "test" (
     goto :test
 )
 
+if "%~1" == "html" (
+    goto :test
+)
+
 if "%~1" == "publish" (
     goto :publish
 )
@@ -48,6 +52,12 @@ call :clean
 call node generate.js lessons docs
 call node generate.js wasm docs\webassembly
 call cd docs && python -m http.server 8080
+exit /b 0
+
+:html
+call :clean
+call node generate.js lessons docs
+call node generate.js wasm docs/webassembly
 exit /b 0
 
 :publish

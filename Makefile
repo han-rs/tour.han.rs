@@ -6,6 +6,9 @@ test: clean
 	@node generate.js lessons docs
 	@node generate.js wasm docs/webassembly
 	@cd docs && python3 -m http.server 8080
+html: clean
+	@node generate.js lessons docs
+	@node generate.js wasm docs/webassembly
 publish: clean
 	git branch -D gh-pages
 	git checkout -b gh-pages
