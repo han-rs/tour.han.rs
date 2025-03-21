@@ -10,6 +10,8 @@
 笔者精力及水平有限, 有错误或不足之处, [敬请批评指正](https://github.com/han-rs/tour.han.rs/issues);
 如您想参与到本指南的编写中, 也欢迎提交 PR.
 
+本指南在线版本见: [https://tour.han.rs](https://tour.han.rs).
+
 ## 主要贡献者
 
 - [`Hantong Chen`](https://github.com/cxw620)
