@@ -8,6 +8,8 @@ title = "Rust 学习之旅"
 edition = "2024"
 
 [output.html]
+git-repository-url = "https://github.com/han-rs/tour.han.rs"
+edit-url-template = "https://github.com/han-rs/tour.han.rs/edit/next/{path}"
 additional-js = ["./theme/giscus.js"]
 smart-punctuation = true
 mathjax-support = true
